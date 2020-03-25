@@ -15,9 +15,11 @@ subscription-manager list --available --all --matches="Red Hat OpenStack"
 ```
 
 附加可用订阅
+注意⚠️：--pool=后面的参数来自上面命令输出里Pool ID后面的那串字符
 ```
 subscription-manager attach --pool=Valid-Pool-Number-123456
 ```
+
 
 启用软件仓库
 ```
