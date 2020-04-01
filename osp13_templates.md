@@ -34,7 +34,6 @@ openstack --debug overcloud deploy --templates \
 ```
 
 修改说明：
-1. 
 * 采用默认plan和network isolation方式进行网络隔离
 ```
   -p /usr/share/openstack-tripleo-heat-templates/plan-samples/plan-environment-derived-params.yaml
@@ -42,27 +41,22 @@ openstack --debug overcloud deploy --templates \
   -e /usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml
 ```
 
-2. 
 * 节点类型及数量在/home/stack/templates/node-info.yaml中定义
 
-3. 
 * 使用以下文件指定部署受用的镜像
 ```
   -e /home/stack/templates/overcloud_images.yaml
 ```
 
-4. 
 * 指定网络设置
 ```
   -e /home/stack/templates/network_environment.yaml
 ```
 
-5. 
 * 指定ntp服务器
 ```
   --ntp-server <time_server_ip>
 ```
-
 
 ### templates/node-info.yaml
 注意⚠️：新增
@@ -74,7 +68,6 @@ parameter_defaults:
   ControllerCount: 3
   ComputeCount: 2
 ```
-
 
 ### templates/base.yaml
 注意⚠️：新增
@@ -163,16 +156,13 @@ parameter_defaults:
 ```
 
 修改说明：
-1. 
 * 不使用ceph，因此移除OS::TripleO::CephStorage::Net::SoftwareConfig
 
-2. 
 * External Network Vlan ID是1312
 ```
   ExternalNetworkVlanID:1312
 ```
 
-3. 
 * overcloud同时支持vxlan和vlan租户网络
 * 默认创建vlan网络datacentre
 * 指定datacentre vlan网络id范围
@@ -185,7 +175,6 @@ parameter_defaults:
   NeutronEnableIsolatedMetadata: True
 ```
 
-4. 
 * 指定部署或更新都可配置网络
 ```
   NetworkDeploymentActions: ['CREATE','UPDATE']
