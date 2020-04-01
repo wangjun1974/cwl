@@ -179,3 +179,6 @@ parameter_defaults:
 ```
   NetworkDeploymentActions: ['CREATE','UPDATE']
 ```
+
+### 获取baremetal节点信息
+参考: 
