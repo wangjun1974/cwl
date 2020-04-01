@@ -182,3 +182,7 @@ parameter_defaults:
 
 ### 获取baremetal节点信息
 参考: https://github.com/wangjun1974/cwl/blob/master/osp13_save_baremetal_data.md
+
+### templates/nic-configs/controller.yaml
+
+### templates/nic-configs/compute.yaml
