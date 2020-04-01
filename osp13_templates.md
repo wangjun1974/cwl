@@ -193,7 +193,7 @@ parameter_defaults:
 * bond模式根据需要调整
 
 ### templates/nic-configs/compute.yaml
-参考：
+参考：https://github.com/wangjun1974/cwl/blob/master/templates/nic-configs/compute.yaml
 
 * 具体的接口设备名可通过获取baremetal节点信息获取
 * br-ctlplane是部署接口所在的ovs网桥，包含绑定的两个接口nic1和nic2
