@@ -32,3 +32,27 @@ openstack --debug overcloud deploy --templates \
   --ntp-server <time_server_ip>\
   --log-file /tmp/overcloud_deploy_`date +%Y%m%d_%H%M%S`.log
 ```
+
+修改原因：
+1. 采用默认plan和network isolation方式进行网络隔离
+```
+-p /usr/share/openstack-tripleo-heat-templates/plan-samples/plan-environment-derived-params.yaml
+-e /usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml
+```
+
+2. 节点类型及数量在/home/stack/templates/node-info.yaml中定义
+
+3. 使用以下文件指定部署受用的镜像
+```
+-e /home/stack/templates/overcloud_images.yaml
+```
+
+4. 指定网络设置
+```
+-e /home/stack/templates/network_environment.yaml
+```
+
+5. 指定ntp服务器
+```
+  --ntp-server <time_server_ip>\
+```
